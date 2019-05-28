@@ -4,14 +4,14 @@
 		"floating": "auto_off",
 		"fullscreen_mode": 0,
 		"layout": "splith",
-		"percent": 0.333333333333333,
+		"percent": 0.5,
 		"type": "con",
 		"nodes": [
 		{
 			"border": "normal",
 			"floating": "auto_off",
 			"layout": "tabbed",
-			"percent": 1,
+			"percent": null,
 			"type": "con",
 			"nodes": [
 			{
@@ -25,13 +25,69 @@
 					"y": 27
 				},
 				"name": "IntelliJ IDEA",
-				"percent": 1,
+				"percent": 0.333333333333333,
 				"swallows": [
 				{
-					"instance": "^idea$"
+					"class": "^idea$"
 				}
 				],
 				"type": "con"
+			},
+			{
+				"border": "normal",
+				"floating": "auto_off",
+				"layout": "splith",
+				"percent": 0.333333333333333,
+				"type": "con",
+				"nodes": [
+				{
+					"border": "pixel",
+					"current_border_width": 0,
+					"floating": "auto_off",
+					"geometry": {
+						"height": 750,
+						"width": 1366,
+						"x": 0,
+						"y": 18
+					},
+					"name": "VSCodium",
+					"percent": null,
+					"swallows": [
+					{
+						"instance": "^vscodium$"
+					}
+					],
+					"type": "con"
+				}
+				]
+			},
+			{
+				"border": "normal",
+				"floating": "auto_off",
+				"layout": "splith",
+				"percent": 0.333333333333333,
+				"type": "con",
+				"nodes": [
+				{
+					"border": "pixel",
+					"current_border_width": 0,
+					"floating": "auto_off",
+					"geometry": {
+						"height": 500,
+						"width": 650,
+						"x": 0,
+						"y": 0
+					},
+					"name": "Pluma",
+					"percent": null,
+					"swallows": [
+					{
+						"instance": "^pluma$"
+					}
+					],
+					"type": "con"
+				}
+				]
 			}
 			]
 		}

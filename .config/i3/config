@@ -29,7 +29,7 @@ font pango:monospace 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
+#for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
 for_window [class=".*"] border pixel 0
 for_window [class=".*"] split toggle
 # start a terminal
@@ -200,6 +200,7 @@ bindsym $mod+p exec i3lock-fancy -b=0x3 -n
 # Autostart applications
 exec_always --no-startup-id $HOME/.config/polybar/panel.sh
 exec --no-startup-id ~/.screenlayout/work.sh
+exec --no-startup-id /usr/lib/franz/franz
 #exec --no-startup-id setxkbmap -layout 'latam' -model pc105
 # doesnt work well, so i put this into xorg
 # Section "InputClass"
@@ -210,11 +211,11 @@ exec --no-startup-id ~/.screenlayout/work.sh
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --config $HOME/.config/compton/compton.conf
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
-exec --no-startup-id "i3-msg 'workspace 1; append_layout $HOME/.config/i3/layouts-work/workspace-WORKCHAT.json'"
-exec --no-startup-id "i3-msg 'workspace 2; append_layout $HOME/.config/i3/layouts-work/workspace-IDE.json'"
-exec --no-startup-id "i3-msg 'workspace 3; append_layout $HOME/.config/i3/layouts-work/workspace-TERMINALS.json'"
-exec --no-startup-id "i3-msg 'workspace 4; append_layout $HOME/.config/i3/layouts-work/workspace-CHROME.json'"
-exec --no-startup-id "i3-msg 'workspace 5; append_layout $HOME/.config/i3/layouts-work/workspace-FIREFOX.json'"
+#exec --no-startup-id "i3-msg 'workspace 1; append_layout $HOME/.config/i3/layouts-work/workspace-WORKCHAT.json'"
+#exec --no-startup-id "i3-msg 'workspace 2; append_layout $HOME/.config/i3/layouts-work/workspace-IDE.json'"
+#exec --no-startup-id "i3-msg 'workspace 3; append_layout $HOME/.config/i3/layouts-work/workspace-TERMINALS.json'"
+#exec --no-startup-id "i3-msg 'workspace 4; append_layout $HOME/.config/i3/layouts-work/workspace-CHROME.json'"
+#exec --no-startup-id "i3-msg 'workspace 5; append_layout $HOME/.config/i3/layouts-work/workspace-FIREFOX.json'"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

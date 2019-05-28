@@ -4,7 +4,7 @@
 		"floating": "auto_off",
 		"fullscreen_mode": 0,
 		"layout": "splitv",
-		"percent": 0.5,
+		"percent": null,
 		"type": "con",
 		"nodes": [
 		{
@@ -12,10 +12,10 @@
 			"current_border_width": 0,
 			"floating": "auto_off",
 			"geometry": {
-				"height": 711,
+				"height": 768,
 				"width": 1366,
 				"x": 0,
-				"y": 26
+				"y": 0
 			},
 			"name": "Franz",
 			"percent": 1,

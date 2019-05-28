@@ -4,7 +4,7 @@
 		"floating": "auto_off",
 		"fullscreen_mode": 0,
 		"layout": "splitv",
-		"percent": null,
+		"percent": 0.5,
 		"type": "con",
 		"nodes": [
 		{
@@ -17,7 +17,7 @@
 				"x": 0,
 				"y": 0
 			},
-			"name": "jcuzmar@artix-hp",
+			"name": "jcuzmar@artix-hp:~",
 			"percent": 0.5,
 			"swallows": [
 			{
@@ -44,13 +44,41 @@
 					"y": 0
 				},
 				"name": "jcuzmar@artix-hp:~",
-				"percent": null,
+				"percent": 0.5,
 				"swallows": [
 				{
 					"instance": "^Alacritty$"
 				}
 				],
 				"type": "con"
+			},
+			{
+				"border": "normal",
+				"floating": "auto_off",
+				"layout": "splitv",
+				"percent": 0.5,
+				"type": "con",
+				"nodes": [
+				{
+					"border": "pixel",
+					"current_border_width": 0,
+					"floating": "auto_off",
+					"geometry": {
+						"height": 502,
+						"width": 1019,
+						"x": 0,
+						"y": 0
+					},
+					"name": "jcuzmar@artix-hp:~",
+					"percent": null,
+					"swallows": [
+					{
+						"instance": "^Alacritty$"
+					}
+					],
+					"type": "con"
+				}
+				]
 			}
 			]
 		}

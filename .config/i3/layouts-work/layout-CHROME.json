@@ -3,8 +3,8 @@
 	"border": "normal",
 		"floating": "auto_off",
 		"fullscreen_mode": 0,
-		"layout": "splith",
-		"percent": 0.5,
+		"layout": "splitv",
+		"percent": null,
 		"type": "con",
 		"nodes": [
 		{
@@ -17,7 +17,7 @@
 				"x": 1366,
 				"y": 0
 			},
-			"name": "Google Chrome",
+			"name": "How do you implement layout with the autostarting of applications in the i3 window manager? - Unix & Linux Stack Exchange - Google Chrome",
 			"percent": 1,
 			"swallows": [
 			{
