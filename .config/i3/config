@@ -29,6 +29,7 @@ font pango:monospace 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
 for_window [class=".*"] border pixel 0
 for_window [class=".*"] split toggle
 # start a terminal
@@ -199,6 +200,7 @@ bindsym $mod+p exec i3lock-fancy -b=0x3 -n
 # Autostart applications
 exec_always --no-startup-id $HOME/.config/polybar/panel.sh
 exec --no-startup-id ~/.screenlayout/work.sh
+exec --no-startup-id setxkbmap -layout 'latam' -model pc105
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --config $HOME/.config/compton/compton.conf
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst

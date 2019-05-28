@@ -1,0 +1,51 @@
+! -----
+! URxvt
+! -----
+ 
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.font: xft:xos4 Terminus:size=13,xft:Symbola:size=13
+Urxvt.letterSpace : -1
+URxvt.scrollBar: false
+URxvt.cursorBlink: true                                              
+URxvt.perl-ext: default,matcher,selection-to-clipboard,confirm-paste
+URxvt.matcher.button: 1                                              
+ 
+! special
+*.foreground:   #a4dfff
+*.background:   #151515
+*.cursorColor:  #a4dfff
+ 
+! black
+*.color0:       #151515
+*.color8:       #a4dfff
+ 
+! red
+*.color1:       #ff2636
+*.color9:       #ff2636
+ 
+! green
+*.color2:       #00ffff
+*.color10:      #00ffff
+ 
+! yellow
+*.color3:       #a4dfff
+*.color11:      #a4dfff
+ 
+! blue
+*.color4:       #00bfff
+*.color12:      #00bfff
+ 
+! magenta
+*.color5:       #05b2b2
+*.color13:      #05b2b2
+ 
+! cyan
+*.color6:       #00ffff
+*.color14:      #00ffff
+ 
+! white
+*.color7:       #a4dfff
+*.color15:      #a4dfff
+xterm*background: black
+xterm*foreground: lightgray
