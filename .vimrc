@@ -67,7 +67,11 @@ set foldnestmax=10      " 10 nested fold max
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
-
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 let mapleader=","       " leader is comma
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
