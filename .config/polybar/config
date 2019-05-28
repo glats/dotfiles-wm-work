@@ -51,7 +51,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-right = backlight pulseaudio wlan battery temperature date powermenu
+modules-right = backlight pulseaudio wlan battery temperature xkeyboard date powermenu
 bottom = true
 
 tray-position = right
@@ -248,6 +248,18 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/xkeyboard]
+type = internal/xkeyboard
+
+format-prefix = " "
+format-prefix-foreground = ${colors.principal}
+
+label-layout = %layout%
+
+label-indicator-padding = 1
+label-indicator-margin = 1
+label-indicator-background = ${colors.background}
 
 [module/date]
 type = internal/date
