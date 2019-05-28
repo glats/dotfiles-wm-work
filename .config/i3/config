@@ -200,7 +200,13 @@ bindsym $mod+p exec i3lock-fancy -b=0x3 -n
 # Autostart applications
 exec_always --no-startup-id $HOME/.config/polybar/panel.sh
 exec --no-startup-id ~/.screenlayout/work.sh
-exec --no-startup-id setxkbmap -layout 'latam' -model pc105
+#exec --no-startup-id setxkbmap -layout 'latam' -model pc105
+# doesnt work well, so i put this into xorg
+# Section "InputClass"
+#       Identifier "system-keyboard"
+#        Option "XkbLayout"  "latam,es"
+#        Option "XkbModel"   "pc105"
+#EndSection
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --config $HOME/.config/compton/compton.conf
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
