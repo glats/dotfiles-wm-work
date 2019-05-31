@@ -189,7 +189,7 @@ bar-volume-empty-foreground = ${colors.principal}
 [module/battery]
 type = internal/battery
 battery = BAT1
-adapter = ADP1
+adapter = ACAD
 full-at = 100
 
 format-charging = <animation-charging> <label-charging>
