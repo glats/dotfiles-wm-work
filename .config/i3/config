@@ -33,7 +33,7 @@ floating_modifier $mod
 for_window [class=".*"] border pixel 0
 for_window [class=".*"] split toggle
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id "DRI_PRIME=1 alacritty"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -145,6 +145,8 @@ workspace 8 output eDP-1
 workspace 9 output eDP-1
 workspace 0 output eDP-1
 
+assign [class="^franz$"] 1
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -204,6 +206,9 @@ bindsym Control+Print exec xfce4-screenshooter -w
 exec_always --no-startup-id $HOME/.config/polybar/panel.sh
 exec --no-startup-id ~/.screenlayout/work.sh
 exec --no-startup-id /usr/lib/franz/franz
+exec --no-startup-id /usr/bin/libinput-gestures
+#exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -b=0x3 -n" &
+exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 600 'i3lock-fancy -b=0x3 -n' ''
 #exec --no-startup-id setxkbmap -layout 'latam' -model pc105
 # doesnt work well, so i put this into xorg
 # Section "InputClass"

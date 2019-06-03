@@ -1,6 +1,7 @@
 .cache/
 .config/
 .dbus/
+.cargo/
 .local/
 .pki/
 .mono/

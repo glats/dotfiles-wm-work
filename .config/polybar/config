@@ -13,7 +13,7 @@ background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #555
 
-principal = #A4DFFF
+principal = #ffffff
 
 [settings]
 screenchange-reload = true
@@ -29,15 +29,16 @@ margin-bottom = 5
 
 [bar/main]
 width = 100%
-height = 27
+height = 25
 fixed-center = false
 background = ${colors.background}
 foreground = ${colors.principal}
+radius = 0.5
 
 line-size = 1
 line-color = #f00
 
-border-size = 2
+border-size = 3
 border-color = #00000000
 
 padding-left = 0
@@ -49,9 +50,9 @@ module-margin-right = 2
 font-0 = xos4 Terminus:size=9;1                          
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:style=Regular:pixelsize=12;2
-font-4 = Font Awesome 5 Free:style=Solid:pixelsize=12;2
-font-5 = Font Awesome 5 Brands:style=Regular:pixelsize=12;2
+font-3 = Font Awesome 5 Free:style=Regular:pixelsize=9;2
+font-4 = Font Awesome 5 Free:style=Solid:pixelsize=9;2
+font-5 = Font Awesome 5 Brands:style=Regular:pixelsize=9;2
 
 
 modules-left = i3
@@ -187,6 +188,7 @@ bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.principal}
 
 [module/battery]
+#ls -1 /sys/class/power_supply/
 type = internal/battery
 battery = BAT1
 adapter = ACAD
