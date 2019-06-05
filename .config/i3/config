@@ -33,7 +33,7 @@ floating_modifier $mod
 for_window [class=".*"] border pixel 0
 for_window [class=".*"] split toggle
 # start a terminal
-bindsym $mod+Return exec --no-startup-id "DRI_PRIME=1 alacritty"
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
