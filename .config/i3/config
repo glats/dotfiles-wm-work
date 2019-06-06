@@ -57,6 +57,7 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+bindsym $mod+Tab focus right
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -216,6 +217,7 @@ exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 600 'i3lock-
 #        Option "XkbLayout"  "latam,es"
 #        Option "XkbModel"   "pc105"
 #EndSection
+exec --no-startup-id thunar --daemon
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --config $HOME/.config/compton/compton.conf
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
