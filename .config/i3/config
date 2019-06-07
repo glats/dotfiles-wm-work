@@ -207,7 +207,6 @@ bindsym Control+Print exec xfce4-screenshooter -w
 exec_always --no-startup-id $HOME/.config/polybar/panel.sh
 exec --no-startup-id ~/.screenlayout/work.sh
 exec --no-startup-id /usr/lib/franz/franz
-exec --no-startup-id /usr/bin/libinput-gestures
 #exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -b=0x3 -n" &
 exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 600 'i3lock-fancy -b=0x3 -n' ''
 #exec --no-startup-id setxkbmap -layout 'latam' -model pc105
@@ -217,10 +216,11 @@ exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 600 'i3lock-
 #        Option "XkbLayout"  "latam,es"
 #        Option "XkbModel"   "pc105"
 #EndSection
-exec --no-startup-id thunar --daemon
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --config $HOME/.config/compton/compton.conf
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+exec --no-startup-id thunar --daemon
+exec --no-startup-id libinput-gestures-setup start
 #exec --no-startup-id "i3-msg 'workspace 1; append_layout $HOME/.config/i3/layouts-work/workspace-WORKCHAT.json'"
 #exec --no-startup-id "i3-msg 'workspace 2; append_layout $HOME/.config/i3/layouts-work/workspace-IDE.json'"
 #exec --no-startup-id "i3-msg 'workspace 3; append_layout $HOME/.config/i3/layouts-work/workspace-TERMINALS.json'"
