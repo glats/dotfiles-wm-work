@@ -105,7 +105,7 @@ set $ws3 "3:terms"
 set $ws4 "4:chrome"
 set $ws5 "5:firefox"
 set $ws6 "6:file"
-set $ws7 "7"
+set $ws7 "7:media"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -146,7 +146,12 @@ workspace 8 output eDP-1
 workspace 9 output eDP-1
 workspace 0 output eDP-1
 
-assign [class="^franz$"] 1
+assign [instance="^franz$"] $ws1
+assign [instance="^sun-awt-X11-XFramePeer$"] $ws2
+assign [instance="^vscodium$"] $ws2
+assign [instance="^Alacritty$"] $ws3
+assign [instance="^google-chrome$"] $ws4
+assign [instance="^Navigator$"] $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -194,7 +199,7 @@ bindsym XF86MonBrightnessDown exec light -U 20 # decrease screen brightness
 # bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous

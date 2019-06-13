@@ -46,8 +46,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 set t_Co=256
 set t_ut=
-colorscheme codedark
-let g:airline_theme = 'codedark'
+"colorscheme codedark
+"let g:airline_theme = 'codedark'
 syntax on
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
