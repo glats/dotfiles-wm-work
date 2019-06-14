@@ -47,12 +47,18 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = xos4 Terminus:size=9;1                          
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:style=Regular:pixelsize=9;2
-font-4 = Font Awesome 5 Free:style=Solid:pixelsize=9;2
-font-5 = Font Awesome 5 Brands:style=Regular:pixelsize=9;2
+font-0 = Iconsolata:style=Regular:size=8
+font-1 =unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:size=10
+font-3 = Font Awesome 5 Free:style=Regular:size=9
+font-4 = Font Awesome 5 Free:style=Solid:size=9
+font-5 = Font Awesome 5 Brands:style=Regular:size=9
+;font-0 = xos4 Terminus:size=9;1                          
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+;font-2 = siji:pixelsize=10;1
+;font-3 = Font Awesome 5 Free:style=Regular:pixelsize=9;2
+;font-4 = Font Awesome 5 Free:style=Solid:pixelsize=9;2
+;:ont-5 = Font Awesome 5 Brands:style=Regular:pixelsize=9;2
 
 
 modules-left = i3
@@ -120,19 +126,8 @@ label-separator = " "
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = BL
-
-bar-width = 7
-bar-indicator = |
-bar-indicator-foreground = ${colors.principal}
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = ${colors.principal}
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.principal}
+format = <label>
+label = Light: %percentage%%
 
 [module/backlight]
 inherit = module/xbacklight
@@ -163,30 +158,13 @@ ramp-signal-foreground = ${colors.principal}
 [module/pulseaudio]
 type = internal/pulseaudio
  
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+format-volume = <label-volume>
+label-volume = Volume %percentage%%
 label-volume-foreground = ${colors.principal}
 
-format-muted-prefix = " "
 format-muted-foreground = ${colors.principal}
-label-muted = off
+label-muted = Volume off
 
-bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.principal}
-bar-volume-foreground-1 = ${colors.principal}
-bar-volume-foreground-2 = ${colors.principal}
-bar-volume-foreground-3 = ${colors.principal}
-bar-volume-foreground-4 = ${colors.principal}
-bar-volume-foreground-5 = ${colors.principal}
-bar-volume-foreground-6 = ${colors.principal}
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.principal}
 
 [module/battery]
 #ls -1 /sys/class/power_supply/
