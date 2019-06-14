@@ -127,7 +127,7 @@ label-separator = " "
 type = internal/xbacklight
 
 format = <label>
-label = Light: %percentage%%
+label = Light %percentage%%
 
 [module/backlight]
 inherit = module/xbacklight
