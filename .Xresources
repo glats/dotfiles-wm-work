@@ -11,6 +11,17 @@ rofi.hide-scrollbar: true
 ied4 rofi.color-urgent: #002b37, #A6AFB8, #002b37, #003642, #da4281
 
 *.alpha: 0.77
+!-------------
+! Render
+!-------------
+!
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.autohint: 0
+Xft.hintstyle: hintslight
+Xft.dpi: 96
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
 
 !https://terminal.sexy/
  

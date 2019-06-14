@@ -149,9 +149,8 @@ workspace 0 output eDP-1
 assign [instance="^franz$"] $ws1
 assign [instance="^sun-awt-X11-XFramePeer$"] $ws2
 assign [instance="^vscodium$"] $ws2
-assign [instance="^Alacritty$"] $ws3
 assign [instance="^google-chrome$"] $ws4
-assign [instance="^Navigator$"] $ws4
+assign [instance="^Navigator$"] $ws5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
