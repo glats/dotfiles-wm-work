@@ -11,7 +11,7 @@
 background = #222
 background-alt = #444
 foreground = #dfdfdf
-foreground-alt = #555
+foreground-alt = #888888
 
 principal = #ffffff
 
@@ -107,7 +107,8 @@ label-focused-padding = 2
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%: %icon%
 label-unfocused-padding = 2
- 
+label-unfocused-foreground = ${colors.foreground-alt}
+
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%: %icon%
 label-visible-background = ${self.label-focused-background}
