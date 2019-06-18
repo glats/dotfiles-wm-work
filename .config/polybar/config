@@ -94,14 +94,14 @@ ws-icon-default = 
 ;pin-workspaces = true
  
 label-mode = %mode%
-label-mode-padding = 2
+;label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.principal}
  
 ; focused = Active workspace on focused monitor
 label-focused = %index%: %icon%
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.principal}
+;label-focused-underline = ${colors.principal}
 label-focused-padding = 2
  
 ; unfocused = Inactive workspace on any monitor
@@ -112,12 +112,12 @@ label-unfocused-foreground = ${colors.foreground-alt}
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%: %icon%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
  
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%: %icon%!
-label-urgent-background = ${self.label-focused-underline}
+label-urgent-background = ${self.label-focused-background}
 label-urgent-foreground = ${self.label-focused-background}
 label-urgent-padding = 2
 
