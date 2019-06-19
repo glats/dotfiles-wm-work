@@ -209,8 +209,9 @@ bindsym Control+Print exec xfce4-screenshooter -w
 
 # Autostart applications
 exec_always --no-startup-id $HOME/.config/polybar/panel.sh
-exec --no-startup-id ~/.screenlayout/work.sh
+exec --no-startup-id ~/.screenlayout/workvga.sh
 exec --no-startup-id /usr/lib/franz/franz
+exec --no-startup-id xfce4-clipman
 #exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -b=0x3 -n" &
 exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 600 'i3lock-fancy -b=0x3 -n' ''
 #exec --no-startup-id setxkbmap -layout 'latam' -model pc105
