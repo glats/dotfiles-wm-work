@@ -29,7 +29,7 @@ margin-bottom = 5
 
 [bar/main]
 width = 100%
-height = 27
+height = 30
 fixed-center = false
 background = ${colors.background}
 foreground = ${colors.principal}
@@ -38,7 +38,7 @@ radius = 0.5
 line-size = 1
 line-color = #f00
 
-border-size = 3
+border-size = 5
 border-color = #00000000
 
 padding-left = 0
@@ -52,13 +52,6 @@ font-1 = Font Awesome 5 Free:style=Regular:size=9
 font-2 = Font Awesome 5 Free:style=Solid:size=9
 font-3 = Font Awesome 5 Brands:style=Regular:size=9
 font-4 = Noto Color Emoji:style=Regular:size=9
-;font-0 = xos4 Terminus:size=9;1                          
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
-;font-3 = Font Awesome 5 Free:style=Regular:pixelsize=9;2
-;font-4 = Font Awesome 5 Free:style=Solid:pixelsize=9;2
-;:ont-5 = Font Awesome 5 Brands:style=Regular:pixelsize=9;2
-
 
 modules-left = i3
 modules-right = backlight pulseaudio battery temperature xkeyboard date powermenu
@@ -66,7 +59,6 @@ bottom = true
 
 tray-position = right
 tray-padding = 2
-
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -92,16 +84,15 @@ ws-icon-default = 
  
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
- 
+
 label-mode = %mode%
-;label-mode-padding = 2
+label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.principal}
  
 ; focused = Active workspace on focused monitor
 label-focused = %index%: %icon%
 label-focused-background = ${colors.background}
-;label-focused-underline = ${colors.principal}
 label-focused-padding = 2
  
 ; unfocused = Inactive workspace on any monitor
@@ -112,13 +103,12 @@ label-unfocused-foreground = ${colors.foreground-alt}
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%: %icon%
 label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
  
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%: %icon%!
-label-urgent-background = ${self.label-focused-background}
-label-urgent-foreground = ${self.label-focused-background}
+label-urgent-background = ${colors.principal}
+label-urgent-foreground = ${colors.background}
 label-urgent-padding = 2
 
 label-separator = " "
@@ -151,7 +141,6 @@ format-disconnected =
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground}
-
 ramp-signal-foreground = ${colors.principal}
 
 [module/pulseaudio]
