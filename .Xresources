@@ -1,15 +1,3 @@
-!-----------------
-!ROFI Color theme
-!-----------------
-rofi.color-enabled: true
-rofi.color-window: #1e1e1e, #ffffff, #151515
-rofi.color-normal: argb:00000000, #ffffff, argb:00000000, #ffffff, #1b2b34
-rofi.color-active: argb:00000000, #6699cc, argb:00000000, #6699cc, #1b2b34
-rofi.color-urgent: argb:00000000, #e12a36, argb:00000000, #dd2a4b, #1b2b34
-rofi.separator-style: none
-rofi.hide-scrollbar: true
-ied4 rofi.color-urgent: #002b37, #A6AFB8, #002b37, #003642, #da4281
-
 *.alpha: 0.77
 !-------------
 ! Render
