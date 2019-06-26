@@ -1,5 +1,5 @@
 configuration {
-    display-drun: "Program";
+    display-drun: "Choose";
     display-window: "Window";
     show-icons: true;
 }
