@@ -54,6 +54,7 @@ font-3 = Font Awesome 5 Brands:style=Regular:size=9
 font-4 = Noto Color Emoji:style=Regular:size=9
 
 modules-left = i3
+modules-center = xwindow
 modules-right = backlight pulseaudio battery temperature xkeyboard date powermenu
 bottom = true
 
@@ -68,10 +69,18 @@ scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 
+[module/xwindow]
+type = internal/xwindow    
+label = %title% 
+label-empty = Oops!
+label-maxlen = 50
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
+; TODO change in i3 icons
+;strip-wsnumbers = true
 wrapping-scroll = false
 ws-icon-0 = 1:chat;
 ws-icon-1 = 2:dev;
@@ -193,7 +202,7 @@ animation-discharging-framerate = 500
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
+thermal-zone = 5
 warn-temperature = 60
 
 format = <ramp> <label>
