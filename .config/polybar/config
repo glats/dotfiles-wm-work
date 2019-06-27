@@ -72,7 +72,6 @@ cursor-click = pointer
 [module/xwindow]
 type = internal/xwindow
 label = %title%
-label-empty = Oops!
 label-maxlen = 50
 
 [module/i3]
