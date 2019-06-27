@@ -70,8 +70,8 @@ scroll-down = i3wm-wsprev
 cursor-click = pointer
 
 [module/xwindow]
-type = internal/xwindow    
-label = %title% 
+type = internal/xwindow
+label = %title%
 label-empty = Oops!
 label-maxlen = 50
 
