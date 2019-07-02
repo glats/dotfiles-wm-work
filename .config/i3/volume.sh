@@ -1,7 +1,7 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # Volume notification: Pulseaudio and dunst
-set -e
+set -u
 
 icon_path=/usr/share/icons/ePapirus/48x48/status/
 notify_id=506
@@ -15,7 +15,7 @@ notify=$HOME/.config/i3/notify-send.sh
 
 
 function get_volume {
-    pacmd list-sinks | awk '/\tvolume:/ { print $5 }' | tail -n+$((sink_nr+1)) | head -n1 | cut -d '%' -f 1
+    pacmd list-sinks | awk '/\tvolume:/ { print $5 }'  | head -n1 | cut -d '%' -f 1
 }
 
 function get_volume_icon {
@@ -51,7 +51,7 @@ function volume_notification {
 }
 
 function mute_notification {
-    muted=$(pacmd list-sinks | awk '/muted/ { print $2 }' | tail -n+$((sink_nr+1)) | head -n1)
+    muted=$(pacmd list-sinks | awk '/muted/ { print $2 }' | head -n1)
     if [ $muted == 'yes' ]
     then
         exec $notify -r $notify_id -u low -i $icon_path$icon_mute `get_mute_bar`
