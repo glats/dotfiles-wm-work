@@ -48,7 +48,6 @@ function volume_notification {
     vol_icon=`get_volume_icon $volume`
     bar=`get_bar`
     exec $notify -r $notify_id -u low -i $icon_path$vol_icon $bar
-    echo $notify-send.sh -r $notify_id -u low -i $icon_path$vol_icon $bar
 }
 
 function mute_notification {
