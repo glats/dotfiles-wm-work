@@ -31,7 +31,6 @@ font pango:monospace 8
 floating_modifier $mod
 #for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
 for_window [class=".*"] border pixel 0
-for_window [class=".*"] split toggle
 # start a terminal
 bindsym $mod+Return exec kitty
 
@@ -209,7 +208,7 @@ bindsym Control+Print exec xfce4-screenshooter -w
 
 # Autostart applications
 exec_always --no-startup-id $HOME/.config/polybar/panel.sh
-exec --no-startup-id ~/.screenlayout/work.sh
+exec --no-startup-id ~/.screenlayout/vtrhdmi.sh
 exec --no-startup-id /usr/lib/franz/franz
 exec --no-startup-id xfce4-clipman
 #exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -b=0x3 -n" &
