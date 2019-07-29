@@ -16,6 +16,7 @@
 .vscode-oss/
 .icons/
 .gtkrc-*
+.history
 Videos/
 Desktop/
 Documents/
@@ -38,9 +39,7 @@ Video/
 !dunst
 !compton
 .ICEauthority
-.IdeaIC2018.2/
-.IdeaIC2018.3/
-.IdeaIC2019.1/
+.IdeaIC201*
 .android/
 .anydesk/
 .bashrc.bak

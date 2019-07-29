@@ -62,11 +62,11 @@ function mute_notification {
 
 case $1 in
     up)
-        pactl set-sink-volume $sink_nr +5%
+        pactl set-sink-volume $sink_nr +2%
         volume_notification
         ;;
     down)
-        pactl set-sink-volume $sink_nr -5%
+        pactl set-sink-volume $sink_nr -2%
         volume_notification
 	    ;;
     mute)

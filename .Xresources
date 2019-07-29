@@ -18,18 +18,7 @@ Xft.rgba: rgb
 *background:        #02090D
 *.foreground:       #daf4f4
 *.background:       #02090D
-emacs*foreground:   #daf4f4
-emacs*background:   #02090D
-URxvt*foreground:   #daf4f4
-XTerm*foreground:   #daf4f4
-UXTerm*foreground:  #daf4f4
-URxvt*background:   [100]#02090D
-XTerm*background:   #02090D
-UXTerm*background:  #02090D
-URxvt*cursorColor:  #daf4f4
-XTerm*cursorColor:  #daf4f4
-UXTerm*cursorColor: #daf4f4
-URxvt*borderColor:  [100]#02090D
+
 
 ! Colors 0-15.
 *.color0: #02090D
@@ -68,15 +57,5 @@ URxvt*borderColor:  [100]#02090D
 ! Black color that will not be affected by bold highlighting.
 *.color66: #02090D
 *color66:  #02090D
-
-! Xclock colors.
-XClock*foreground: #daf4f4
-XClock*background: #02090D
-XClock*majorColor:  rgba:da/f4/f4/ff
-XClock*minorColor:  rgba:da/f4/f4/ff
-XClock*hourColor:   rgba:da/f4/f4/ff
-XClock*minuteColor: rgba:da/f4/f4/ff
-XClock*secondColor: rgba:da/f4/f4/ff
-
 ! Set depth to make transparency work.
 URxvt*depth: 32

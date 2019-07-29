@@ -166,7 +166,7 @@ ramp-volume-2 = 
 
 label-muted =  muted
 format-muted-foreground = ${colors.principal}
-
+interval = 2
 
 [module/battery]
 #ls -1 /sys/class/power_supply/
