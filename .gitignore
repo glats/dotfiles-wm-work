@@ -17,6 +17,8 @@
 .icons/
 .gtkrc-*
 .history
+.dmrc
+.xsession-errors.old
 Videos/
 Desktop/
 Documents/
