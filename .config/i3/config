@@ -147,6 +147,7 @@ workspace 0 output eDP-1
 
 assign [instance="^franz$"] $ws1
 assign [instance="^sun-awt-X11-XFramePeer$"] $ws2
+assign [instance="^Eclipse$"] $ws2
 assign [instance="^vscodium$"] $ws2
 assign [instance="^google-chrome$"] $ws4
 assign [instance="^brave-browser$"] $ws5
