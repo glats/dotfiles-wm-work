@@ -203,17 +203,17 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+t exec thunar
-bindsym $mod+p exec i3lock-fancy -b=0x3 -n
+bindsym $mod+p exec ~/.config/i3/i3lock/lock -b=0x3 -n
 bindsym Shift+Print exec xfce4-screenshooter -r
 bindsym Control+Print exec xfce4-screenshooter -w
 
 # Autostart applications
 exec_always --no-startup-id $HOME/.config/polybar/panel.sh
 exec --no-startup-id ~/.screenlayout/vtrhdmi.sh
-exec --no-startup-id franz
+#exec --no-startup-id franz
 exec --no-startup-id xfce4-clipman
 #exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -b=0x3 -n" &
-exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 600 'i3lock-fancy -b=0x3 -n' ''
+exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 600 '~/.config/i3/i3lock/lock -b=0x3 -n' ''
 #exec --no-startup-id setxkbmap -layout 'latam' -model pc105
 # doesnt work well, so i put this into xorg
 # Section "InputClass"
@@ -226,7 +226,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id thunar --daemon
 exec --no-startup-id libinput-gestures-setup start
-exec --no-startup-id xfce4-power-manager
+#exec --no-startup-id xfce4-power-manager
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
