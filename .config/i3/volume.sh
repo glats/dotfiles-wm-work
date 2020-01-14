@@ -5,7 +5,7 @@ set -u
 
 icon_path=/usr/share/icons/ePapirus/48x48/status/
 notify_id=506
-sink_nr=$(pactl list short sinks | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,' | head -n 1)   # use `pacmd list-sinks` to find out sink_nr
+sink_nr=$(pactl list short sinks | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,' | tail -n 1)   # use `pacmd list-sinks` to find out sink_nr
 icon_low="notification-audio-volume-low.svg"
 icon_med="notification-audio-volume-medium.svg"
 icon_high="notification-audio-volume-high.svg"

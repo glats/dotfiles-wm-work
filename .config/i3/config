@@ -32,7 +32,7 @@ floating_modifier $mod
 #for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
 for_window [class=".*"] border pixel 0
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -103,9 +103,9 @@ set $ws2 "2:dev"
 set $ws3 "3:terms"
 set $ws4 "4:chrome"
 set $ws5 "5:brave"
-set $ws6 "6:file"
-set $ws7 "7:media"
-set $ws8 "8"
+set $ws6 "6:remote"
+set $ws7 "7:file"
+set $ws8 "8:media"
 set $ws9 "9"
 set $ws10 "10"
 
