@@ -172,9 +172,9 @@ interval = 2
 [module/battery]
 #ls -1 /sys/class/power_supply/
 type = internal/battery
-battery = BAT1
-adapter = ACAD
-full-at = 100
+battery = BAT0
+adapter = AC
+full-at = 94
 
 format-charging = <animation-charging> <label-charging>
 

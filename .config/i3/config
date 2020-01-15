@@ -96,6 +96,13 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:chat"
@@ -145,12 +152,16 @@ workspace 8 output eDP-1
 workspace 9 output eDP-1
 workspace 0 output eDP-1
 
-assign [instance="^franz$"] $ws1
-assign [instance="^sun-awt-X11-XFramePeer$"] $ws2
+assign [instance="^rambox$"] $ws1
+assign [instance="^jetbrains-idea-ce$"] $ws2
+assign [instance="^jetbrains-idea$"] $ws2
 assign [instance="^Eclipse$"] $ws2
 assign [instance="^vscodium$"] $ws2
+assign [title="^Oracle.*"] $ws2
 assign [instance="^google-chrome$"] $ws4
 assign [instance="^brave-browser$"] $ws5
+assign [instance="^qutebrowser$"] $ws5
+assign [class="^Chromium$"] $ws6
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -186,13 +197,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec $HOME/.config/i3/volume.sh up
-bindsym XF86AudioLowerVolume exec $HOME/.config/i3/volume.sh down
-bindsym XF86AudioMute exec $HOME/.config/i3/volume.sh mute
+bindsym XF86AudioRaiseVolume exec $HOME/.config/scripts/volume.sh up
+bindsym XF86AudioLowerVolume exec $HOME/.config/scripts/volume.sh down
+bindsym XF86AudioMute exec $HOME/.config/scripts/volume.sh mute
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec $HOME/.config/i3/brightness.sh up
-bindsym XF86MonBrightnessDown exec $HOME/.config/i3/brightness.sh down
+bindsym XF86MonBrightnessUp exec $HOME/.config/scripts/brightness.sh up
+bindsym XF86MonBrightnessDown exec $HOME/.config/scripts/brightness.sh down
 
 # Touchpad controls
 # bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
@@ -206,13 +217,15 @@ bindsym $mod+t exec thunar
 bindsym $mod+p exec ~/.config/i3/i3lock/lock -b=0x3 -n
 bindsym Shift+Print exec xfce4-screenshooter -r
 bindsym Control+Print exec xfce4-screenshooter -w
+bindsym $mod+x [urgent=latest] focus
 
 # Autostart applications
 exec_always --no-startup-id $HOME/.config/polybar/panel.sh
-exec --no-startup-id ~/.screenlayout/vtrhdmi.sh
-#exec --no-startup-id franz
+exec --no-startup-id ~/.screenlayout/avanzada.sh
+exec --no-startup-id rambox
+exec --no-startup-id blueman-applet
+exec --no-startup-id setxkbmap -synch
 exec --no-startup-id xfce4-clipman
-#exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -b=0x3 -n" &
 exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 600 '~/.config/i3/i3lock/lock -b=0x3 -n' ''
 #exec --no-startup-id setxkbmap -layout 'latam' -model pc105
 # doesnt work well, so i put this into xorg
@@ -221,7 +234,7 @@ exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 600 '~/.conf
 #        Option "XkbLayout"  "latam,es"
 #        Option "XkbModel"   "pc105"
 #EndSection
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b --config $HOME/.config/compton/compton.conf
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b --config $HOME/.config/picom/picom.conf
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id thunar --daemon
@@ -232,10 +245,10 @@ exec --no-startup-id libinput-gestures-setup start
 #bar {
 #        status_command i3status
 #}
-binding_mode_indicator no
+#binding_mode_indicator no
 smart_gaps on
 gaps inner 3
-gaps outer 1
+gaps outer -3
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)

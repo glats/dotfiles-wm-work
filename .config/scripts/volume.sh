@@ -1,17 +1,19 @@
 #!/bin/bash
 
 # Volume notification: Pulseaudio and dunst
-set -u
-
+display=xorg
+if [[ -z $WAYLAND_DISPLAY ]]; then
+    display=wayland
+fi
 icon_path=/usr/share/icons/ePapirus/48x48/status/
-notify_id=506
-sink_nr=$(pactl list short sinks | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,' | tail -n 1)   # use `pacmd list-sinks` to find out sink_nr
+sink_nr=$(pactl list short sinks | sed -e 's,^\([0-9][0-9]*\)[^0-9].*,\1,' | head -n 1)   # use `pacmd list-sinks` to find out sink_nr
 icon_low="notification-audio-volume-low.svg"
 icon_med="notification-audio-volume-medium.svg"
 icon_high="notification-audio-volume-high.svg"
 icon_over="notification-audio-volume-high.svg"
 icon_mute="notification-audio-volume-muted.svg"
-notify=$HOME/.config/i3/notify-send.sh
+notify=`which notify-send.sh`
+replace_file=/tmp/volume-notification-$display
 
 
 function get_volume {
@@ -47,26 +49,26 @@ function volume_notification {
     volume=`get_volume`
     vol_icon=`get_volume_icon $volume`
     bar=`get_bar`
-    exec $notify -r $notify_id -u low -i $icon_path$vol_icon $bar
+    exec $notify --replace-file=$replace_file -u low -i $icon_path$vol_icon $bar
 }
 
 function mute_notification {
     muted=$(pacmd list-sinks | awk '/muted/ { print $2 }' | head -n1)
     if [ $muted == 'yes' ]
     then
-        exec $notify -r $notify_id -u low -i $icon_path$icon_mute `get_mute_bar`
+        exec $notify --replace-file=$replace_file -u low -i $icon_path$icon_mute `get_mute_bar`
     else
-        exec $notify -r $notify_id -u low -i ${icon_path}`get_volume_icon $(get_volume)` `get_bar`
+        exec $notify --replace-file=$replace_file -u low -i ${icon_path}`get_volume_icon $(get_volume)` `get_bar`
     fi
 }
 
 case $1 in
     up)
-        pactl set-sink-volume $sink_nr +2%
+        pactl set-sink-volume $sink_nr +5%
         volume_notification
         ;;
     down)
-        pactl set-sink-volume $sink_nr -2%
+        pactl set-sink-volume $sink_nr -5%
         volume_notification
 	    ;;
     mute)

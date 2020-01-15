@@ -4,10 +4,13 @@
 # ...even if they are in subdirectories
 !*.config/i3
 !*.config/polybar
-!*.config/compton
+!*.config/picom
 !*.config/dunst
 !*.config/fontconfig
 !*.config/rofi
+!*.config/wofi
+!*.config/mako
+!*.config/waybar
 !*.screenlayout
 !criteria.sh
 !*.Xresources
