@@ -1,16 +1,15 @@
-# Ignore everything
 *
-
-# ...even if they are in subdirectories
-!*.config/i3
-!*.config/polybar
-!*.config/picom
-!*.config/dunst
-!*.config/fontconfig
-!*.config/rofi
-!*.config/wofi
-!*.config/mako
-!*.config/waybar
+!.config/picom
+!.config/scripts
+!.config/dunst
+!.config/fontconfig
+!.config/i3
+!.config/nvim
+!.config/polybar
+!.config/rofi
+!.config/sway
+!.config/waybar
+!.config/wofi
 !*.screenlayout
 !criteria.sh
 !*.Xresources

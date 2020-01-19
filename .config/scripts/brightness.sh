@@ -1,10 +1,7 @@
 #!/usr/bin/bash
 
 # Volume notification: Pulseaudio and dunst
-display=xorg
-if [[ -z $WAYLAND_DISPLAY ]]; then
-    display=wayland
-fi
+[[ -z "${WAYLAND_DISPLAY}" ]] && display='xorg' || display='wayland'
 icon_path=/usr/share/icons/ePapirus/48x48/status/
 notify_id=506
 icon_low="notification-display-brightness-low.svg"
