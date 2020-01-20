@@ -289,3 +289,7 @@ c.colors.tabs.selected.even.bg = base0D
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 c.colors.webpage.bg = base00
+
+## Always restore open sites when qutebrowser is reopened.
+## Type: Bool
+c.auto_save.session = True

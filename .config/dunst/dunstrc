@@ -271,6 +271,7 @@
 
     # Context menu.
     context = ctrl+shift+period
+
 frame_color = "#d0d0d0"
 separator_color = "#d0d0d0"
 [urgency_low]
