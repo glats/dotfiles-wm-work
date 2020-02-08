@@ -62,7 +62,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Source Code Pro:style=Regular:size=8
+font-0 = Fira Code Retina:style=Regular:size=8
 font-1 = Font Awesome 5 Free:style=Regular:size=9
 font-2 = Font Awesome 5 Free:style=Solid:size=9
 font-3 = Font Awesome 5 Brands:style=Regular:size=9

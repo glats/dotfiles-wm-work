@@ -62,7 +62,7 @@ floating_modifier $mod
 #for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
 for_window [class=".*"] border pixel 0
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
