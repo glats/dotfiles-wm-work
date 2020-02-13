@@ -244,7 +244,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+t exec thunar
-bindsym $mod+p exec ~/.config/i3/i3lock/lock -b=0x3 -n
+bindsym $mod+p exec i3lock-fancy -b=0x3 -n
 bindsym Shift+Print exec xfce4-screenshooter -r
 bindsym Control+Print exec xfce4-screenshooter -w
 bindsym $mod+x [urgent=latest] focus
