@@ -1008,7 +1008,7 @@ c.colors.webpage.bg = base00
 
 ## Leave insert mode if a non-editable element is clicked.
 ## Type: Bool
-# c.input.insert_mode.auto_leave = True
+c.input.insert_mode.auto_leave = False
 
 ## Automatically enter insert mode if an editable element is focused
 ## after loading the page.
