@@ -1004,7 +1004,7 @@ c.colors.webpage.bg = base00
 
 ## Enter insert mode if an editable element is clicked.
 ## Type: Bool
-# c.input.insert_mode.auto_enter = True
+c.input.insert_mode.auto_enter = True
 
 ## Leave insert mode if a non-editable element is clicked.
 ## Type: Bool
@@ -1013,13 +1013,13 @@ c.input.insert_mode.auto_leave = False
 ## Automatically enter insert mode if an editable element is focused
 ## after loading the page.
 ## Type: Bool
-c.input.insert_mode.auto_load = True
+c.input.insert_mode.auto_load = False
 
 ## Leave insert mode when starting a new page load. Patterns may be
 ## unreliable on this setting, and they may match the url you are
 ## navigating to, or the URL you are navigating from.
 ## Type: Bool
-# c.input.insert_mode.leave_on_load = True
+c.input.insert_mode.leave_on_load = False
 
 ## Switch to insert mode when clicking flash and other plugins.
 ## Type: Bool
