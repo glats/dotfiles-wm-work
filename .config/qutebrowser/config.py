@@ -1013,13 +1013,13 @@ c.input.insert_mode.auto_leave = False
 ## Automatically enter insert mode if an editable element is focused
 ## after loading the page.
 ## Type: Bool
-c.input.insert_mode.auto_load = False
+c.input.insert_mode.auto_load = True
 
 ## Leave insert mode when starting a new page load. Patterns may be
 ## unreliable on this setting, and they may match the url you are
 ## navigating to, or the URL you are navigating from.
 ## Type: Bool
-c.input.insert_mode.leave_on_load = False
+c.input.insert_mode.leave_on_load = True
 
 ## Switch to insert mode when clicking flash and other plugins.
 ## Type: Bool
@@ -1349,7 +1349,7 @@ c.tabs.background = True
 ##   - persist: Retain the current mode.
 ##   - restore: Restore previously saved mode.
 ##   - normal: Always revert to normal mode.
-# c.tabs.mode_on_change = 'normal'
+c.tabs.mode_on_change = 'persist'
 
 ## Switch between tabs using the mouse wheel.
 ## Type: Bool
@@ -1485,7 +1485,7 @@ c.tabs.show = 'multiple'
 ## Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 ## for a blank page.
 ## Type: FuzzyUrl
-# c.url.default_page = 'https://start.duckduckgo.com/'
+c.url.default_page = 'https://www.google.com/'
 
 ## URL segments where `:navigate increment/decrement` will search for a
 ## number.
