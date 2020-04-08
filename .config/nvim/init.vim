@@ -99,7 +99,7 @@ let no_buffers_menu=1
 set background=dark
 let base16colorspace=256
 set termguicolors
-silent! colorscheme base16-oceanicnext
+silent! colorscheme base16-ia-dark
 
 set mousemodel=popup
 set t_Co=256

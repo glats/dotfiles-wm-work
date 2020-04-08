@@ -31,22 +31,22 @@ font pango:monospace 8
 # Author: Chris Kempson (http://chriskempson.com)
 #
 # You can use these variables anywhere in the i3 configuration file.
-set_from_resource $base00 i3wm.color0  #f0f0f0
-set_from_resource $base08 i3wm.color1  #f0f0f0
-set_from_resource $base0B i3wm.color2  #f0f0f0
-set_from_resource $base0A i3wm.color3  #f0f0f0
-set_from_resource $base0D i3wm.color4  #f0f0f0
-set_from_resource $base0E i3wm.color5  #f0f0f0
-set_from_resource $base0C i3wm.color6  #f0f0f0
-set_from_resource $base05 i3wm.color7  #f0f0f0
-set_from_resource $base03 i3wm.color8  #f0f0f0
-set_from_resource $base09 i3wm.color9  #f0f0f0
-set_from_resource $base01 i3wm.color10 #f0f0f0
-set_from_resource $base02 i3wm.color11 #f0f0f0
-set_from_resource $base04 i3wm.color12 #f0f0f0
-set_from_resource $base06 i3wm.color13 #f0f0f0
-set_from_resource $base0F i3wm.color14 #f0f0f0
-set_from_resource $base07 i3wm.color15 #f0f0f0
+set_from_resource $base00 i3wm.color0  #000000
+set_from_resource $base08 i3wm.color1  #202020
+set_from_resource $base0B i3wm.color2  #303030
+set_from_resource $base0A i3wm.color3  #505050
+set_from_resource $base0D i3wm.color4  #b0b0b0
+set_from_resource $base0E i3wm.color5  #d0d0d0
+set_from_resource $base0C i3wm.color6  #e0e0e0
+set_from_resource $base05 i3wm.color7  #ffffff
+set_from_resource $base03 i3wm.color8  #eb008a
+set_from_resource $base09 i3wm.color9  #f29333
+set_from_resource $base01 i3wm.color10 #f8ca12
+set_from_resource $base02 i3wm.color11 #37b349
+set_from_resource $base04 i3wm.color12 #00aabb
+set_from_resource $base06 i3wm.color13 #0e5a94
+set_from_resource $base0F i3wm.color14 #b31e8d
+set_from_resource $base07 i3wm.color15 #7a2d00
 
 # Basic color configuration using the Base16 variables for windows and borders.
 # Property Name         Border  BG      Text    Indicator Child Border
@@ -61,6 +61,8 @@ client.background       $base07
 floating_modifier $mod
 #for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
 for_window [class=".*"] border pixel 0
+for_window [class="Yad" title="yad-calendar"] floating enable
+for_window [title="Microsoft Teams Notification"] floating enable
 # start a terminal
 bindsym $mod+Return exec kitty
 
